@@ -1,52 +1,79 @@
-.topbar{
+/* barra superior */
 
-height:60px;
-background:#4a7bd0;
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+  height: 60px;
 
-padding:0 20px;
+  background: #4a7bd0;
 
-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  color: white;
+
+  z-index: 1000;
+}
+
+/* logo */
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* campo de busca */
+
+.search input {
+
+  width: 350px;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  border: none;
 
 }
 
-.logo{
-font-size:20px;
-font-weight:600;
-}
+/* ícones */
 
-.search input{
+.icons span {
 
-width:400px;
+  margin-left: 15px;
 
-padding:8px 12px;
-
-border-radius:20px;
-
-border:none;
+  cursor: pointer;
 
 }
 
-.icons span{
+/* ajustar sidebar */
 
-margin-left:15px;
-cursor:pointer;
+.sidebar {
 
-}
-
-.sidebar{
-
-top:60px;
+  top: 60px;
 
 }
 
-.markdown-section{
+/* ajustar conteúdo */
 
-max-width:900px;
+.content {
 
-margin:auto;
+  padding-top: 60px;
+
+}
+
+/* largura de leitura */
+
+.markdown-section {
+
+  max-width: 900px;
+
+  margin: auto;
 
 }
