@@ -1,0 +1,16 @@
+.sidebar {
+  font-size: 15px;
+}
+
+.markdown-section {
+  max-width: 900px;
+}
+
+.markdown-section h1 {
+  border-bottom: 2px solid #eaecef;
+  padding-bottom: 10px;
+}
+
+code {
+  border-radius: 6px;
+}
