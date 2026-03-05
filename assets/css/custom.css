@@ -1,79 +1,91 @@
 /* barra superior */
-
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
   height: 60px;
-
   background: #4a7bd0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 20px;
-
   color: white;
-
   z-index: 1000;
 }
 
 /* logo */
-
 .logo {
   font-size: 20px;
   font-weight: 600;
 }
 
 /* campo de busca */
-
 .search input {
-
   width: 350px;
-
   padding: 8px 12px;
-
   border-radius: 20px;
-
   border: none;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+
+/* bloco de código estilo documentação */
+
+.markdown-section pre {
+  background: #1f2937;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 25px 0;
+  overflow-x: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.markdown-section pre code {
+  color: #f8fafc;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+}
+
+/* cor das palavras-chave */
+
+.token.keyword {
+  color: #f97316;
+}
+
+/* cor das strings */
+
+.token.string {
+  color: #22c55e;
+}
+
+/* cor de funções */
+
+.token.function {
+  color: #60a5fa;
 }
 
 /* ícones */
-
 .icons span {
-
   margin-left: 15px;
-
   cursor: pointer;
-
 }
 
 /* ajustar sidebar */
-
 .sidebar {
-
   top: 60px;
-
 }
 
 /* ajustar conteúdo */
-
 .content {
-
   padding-top: 60px;
-
 }
 
 /* largura de leitura */
 
 .markdown-section {
-
   max-width: 900px;
-
   margin: auto;
-
 }
