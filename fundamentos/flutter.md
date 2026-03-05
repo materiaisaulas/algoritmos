@@ -12,7 +12,7 @@ flutter create nome_do_projeto
 Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativo.
 
 :::imgtext assets/images/futter_demo.jpg
-A tela apresentada corresponde ao <strong>exemplo padrão gerado pelo Flutter</strong> ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um <code>StatefulWidget</code>, permitindo observar como o framework organiza a interface e controla o estado da aplicação.
+A tela apresentada corresponde ao **exemplo padrão gerado pelo Flutter** ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um <code>StatefulWidget</code>, permitindo observar como o framework organiza a interface e controla o estado da aplicação.
 
 Na parte superior encontra-se a <strong>AppBar</strong>, definida dentro do <code>Scaffold</code>, exibindo o título <strong>Flutter Demo Home Page</strong>.
 
