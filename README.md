@@ -11,3 +11,11 @@ e construir um aplicativo simples passo a passo.
 - Widgets
 - Layout
 - Projeto prático
+
+:::imgtext assets/images/flutter_demo.jpg
+A tela apresentada corresponde ao **exemplo padrão gerado pelo Flutter** ao criar um novo projeto.
+
+Na parte superior encontra-se a **AppBar**, definida dentro do `Scaffold`.
+
+No centro da tela está o corpo da interface onde um `Column` apresenta o valor da variável `_counter`.
+:::

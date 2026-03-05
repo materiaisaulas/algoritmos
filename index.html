@@ -46,7 +46,36 @@
     }
 
   </script>
+  <script>
+      (function () {
 
+        function imgTextPlugin(hook) {
+
+          hook.beforeEach(function (markdown) {
+
+            const regex = /:::imgtext\s+(.*?)\n([\s\S]*?):::/g;
+
+            return markdown.replace(regex, function (_, img, content) {
+
+              return `
+<div class="doc-image-text">
+  <img src="${img}">
+  <div class="doc-image-text-content">
+
+${content}
+
+  </div>
+</div>
+`
+            })
+          })
+        }
+
+        window.$docsify = window.$docsify || {};
+        window.$docsify.plugins = [].concat(imgTextPlugin, window.$docsify.plugins || []);
+
+      })();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 
