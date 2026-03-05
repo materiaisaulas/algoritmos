@@ -1,11 +1,19 @@
-## Stateless
 
-Vamos retomar o exemplo que aparece quando criamos um projeto Flutter utilizando o comando: flutter create nome_do_projeto
+# StatelessWidget e StatefulWidget
 
-Esse comando gera automaticamente um projeto inicial com uma estrutura básica de aplicativo.
+## Introdução
 
-Todo aplicativo Flutter começa pela função `main()`.  
-Ela é o ponto de entrada da aplicação e é responsável por inicializar o framework e executar o widget raiz do aplicativo.
+Vamos retomar o exemplo que é gerado automaticamente quando criamos um projeto Flutter utilizando o comando:
+
+```bash
+flutter create nome_do_projeto
+```
+
+Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativo.
+
+Todo aplicativo Flutter começa pela função `main()`.
+
+Ela é o **ponto de entrada da aplicação** e tem a responsabilidade de inicializar o framework Flutter e executar o **widget raiz** do aplicativo.
 
 ```dart
 void main() {
@@ -13,32 +21,79 @@ void main() {
 }
 ```
 
-A classe MyApp usa um **widget imutável**. Isso significa que, após ser construído, ele não possui estado interno que possa ser alterado. Assim, interações do usuário — como cliques em botões, alterações de variáveis ou ações sobre ícones — **não modificam diretamente a interface construída por esse widget**.
+A função `runApp()` recebe um widget e o insere na árvore de widgets da aplicação.
 
-Caso seja necessário alterar o que está sendo exibido na tela, o Flutter precisa **reconstruir o widget** com novos parâmetros ou a partir de uma atualização proveniente de um widget pai. Por esse motivo, `StatelessWidget` é utilizado principalmente para interfaces **estáticas ou dependentes apenas das propriedades recebidas**.
+## StatelessWidget
+
+A classe `MyApp` utiliza um **widget imutável**, pois estende `StatelessWidget`.
+
+Isso significa que, depois de construído, esse widget **não possui estado interno mutável**.
 
 ```dart
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 ```
 
-Já a classe `MyHomePage` utiliza um `Widget` mutável, pois estende um `StatefulWidget`. Em Flutter, estado é qualquer dado que pode mudar ao longo do tempo e que influencia o que é exibido na interface do aplicativo, esta classe passa então a ter a responsabilidade de configurar o `Widget`, e informar que a classe `_MyHomePageState` será responsável por controlar e armazenar o estado desse `Widget`. Essa associação ocorre por meio do método `createState()`, cuja função é criar e retornar uma nova instância da classe de estado que gerenciará as mudanças na interface.
+### Características de um StatelessWidget
 
->Lembre-se: Sempre que o estado é alterado (por exemplo, utilizando `setState()`), o Flutter reconstrói a interface do widget com base nos novos valores armazenados nessa classe de estado
+Um `StatelessWidget`:
+
+- não possui estado interno mutável
+- sua interface depende apenas das **propriedades recebidas**
+- sempre que algo precisa mudar, o widget precisa ser **reconstruído**
+
+Em outras palavras:
+
+> A interface de um StatelessWidget é **uma função das propriedades recebidas**.
+
+### Exemplos comuns de StatelessWidget
+
+Alguns widgets comuns que são stateless:
+
+- `Text`
+- `Icon`
+- `Container`
+- `Row`
+- `Column`
+
+Esses widgets apenas **descrevem a interface**, mas não armazenam dados que mudam ao longo do tempo.
+
+
+## Quando precisamos de estado
+
+Muitas interfaces precisam reagir a eventos como:
+
+- cliques
+- animações
+- contadores
+- mudanças de dados
+- respostas de APIs
+
+Nesses casos, precisamos de um **widget que possua estado mutável**.
+
+Para isso o Flutter fornece o:
+
+# StatefulWidget
+
+A classe `MyHomePage` utiliza um widget mutável porque estende `StatefulWidget`.
 
 ```dart
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -46,22 +101,42 @@ class MyHomePage extends StatefulWidget {
 }
 ```
 
-A classe responsável agora por construir a tela é a `_MyHomePageState()`, essa classe é então responsável por manter o estado **vivo** e controla a sua mudança. No caso do código atual a variável `_counter` é o contador associado ao clique por meio do método `FloatingActionButton`, que em resumo é controlador do **estado** .
+Em Flutter, **estado** é qualquer dado que:
+- pode mudar ao longo do tempo
+- influencia o que é exibido na interface
 
-Sempre que uma variável altera algum aspecto visual da tela (no caso `_counter`) como um número, um texto, uma cor, um ícone ou a visibilidade de um componente essa variável passa a fazer parte do **estado da interface**, e a sua mudança renderiza a tela.
+Exemplos de estado:
+- número de cliques
+- texto digitado
+- posição de um scroll
+- resposta de uma API
 
->De forma resumida a classe `_MyHomePageState()` é responsável por: 
-> * armazenar **variáveis de estado**
-> * reagir a **interações do usuário**
-> * chamar `setState()` quando necessário
-> * **reconstruir a interface** através do método `build()`
->
-> O que é caracteristica de um `StateFul`
+O `StatefulWidget` **não armazena diretamente o estado**.
 
->Lembre-se, o prefixo `_` indica que a classe ou variável possui escopo privado dentro do arquivo, o que é uma convenção comum no Flutter para classes de estado.
+Ele apenas define:
 
-```dart 
+- a **configuração do widget**
+- qual classe irá controlar o estado
+
+Isso acontece através do método:
+
+```dart
+createState()
+```
+
+que retorna a classe responsável por gerenciar o estado.
+
+# Classe State
+
+A classe `_MyHomePageState` é responsável por:
+
+- armazenar o estado
+- reagir a interações do usuário
+- reconstruir a interface
+
+```dart
 class _MyHomePageState extends State<MyHomePage> {
+
   int _counter = 0;
 
   void _incrementCounter() {
@@ -79,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: .center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('You have pushed the button this many times:'),
             Text(
@@ -97,17 +172,130 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-´´´´
-````
+```
 
+## O que é setState()
 
-## Estrutura de um StatefulWidget
+O método `setState()` informa ao Flutter que o **estado foi alterado**.
 
-Um `StatefulWidget` é formado por **duas classes diferentes**, cada uma com uma responsabilidade específica.
+```dart
+setState(() {
+  _counter++;
+});
+```
 
-A primeira classe é o **widget em si**, que representa a **configuração imutável do componente**. Essa classe não armazena dados que mudam.
+Quando `setState()` é executado:
 
-A segunda classe é a **classe de estado**, responsável por armazenar e modificar os dados que podem variar durante a execução da aplicação.
+1. o estado é atualizado
+2. o Flutter chama novamente o método `build()`
+3. a interface é reconstruída
 
-Essa separação permite que o Flutter gerencie a reconstrução da interface de forma eficiente.
+Isso segue o modelo declarativo do Flutter:
+
+> **Interface = função do estado atual**
+
+## Por que o Scaffold fica na classe State
+
+O `Scaffold` define a estrutura visual da tela:
+
+- AppBar
+- Body
+- FloatingActionButton
+- Drawer
+- BottomNavigationBar
+
+Como a interface precisa ser reconstruída quando o estado muda, o `Scaffold` precisa estar dentro do método `build()` da classe `State`.
+
+Fluxo simplificado:
+
+```
+StatefulWidget
+      │
+      ▼
+createState()
+      │
+      ▼
+State
+      │
+      ▼
+build()
+      │
+      ▼
+Scaffold
+```
+
+---
+
+## Acesso às propriedades do widget
+
+A classe `State` pode acessar propriedades do `StatefulWidget` usando:
+
+```dart
+widget.propriedade
+```
+
+Exemplo:
+
+```dart
+title: Text(widget.title)
+```
+
+Aqui:
+
+- `widget` é uma referência ao `MyHomePage`
+- `title` é a propriedade definida nele
+
+---
+
+## Diagrama conceitual
+
+```mermaid
+flowchart TD
+
+A[StatelessWidget] --> B[Interface Imutável]
+
+C[StatefulWidget] --> D[Configuração do Widget]
+D --> E[Classe State]
+E --> F[Estado Mutável]
+F --> G[build()]
+G --> H[Scaffold]
+```
+
+---
+
+# Comparação StatelessWidget vs StatefulWidget
+
+| Característica | StatelessWidget | StatefulWidget |
+|---|---|---|
+| Estado interno | Não | Sim |
+| Interface muda | Não | Sim |
+| Uso comum | Layout estático | Interações e dados dinâmicos |
+
+---
+
+## Regra mental importante
+
+Uma forma simples de entender:
+
+```
+StatelessWidget → descrição da interface
+StatefulWidget → configuração do widget
+State → estado + lógica
+```
+
+# Conclusão
+
+O Flutter utiliza uma arquitetura baseada em **widgets imutáveis**.
+
+Quando precisamos de dados mutáveis, utilizamos `StatefulWidget`, que separa:
+
+- **configuração do widget**
+- **controle do estado**
+- **reconstrução da interface**
+
+Essa separação permite ao Flutter:
+
+- reconstruir interfaces rapidamente
+- manter o estado consistente
+- garantir alta performance.
 
