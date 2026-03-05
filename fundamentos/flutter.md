@@ -11,7 +11,7 @@ flutter create nome_do_projeto
 
 Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativo.
 
-<div style="display:flex; align-items:center; gap:20px;">
+<div style="display:flex; align-items:center; gap:20px; align-items:flex-start;">
 <img src="assets/images/futter_demo.jpg" width="300">
 <div>
 A tela apresentada corresponde ao <strong>exemplo padrão gerado pelo Flutter</strong> ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um <code>StatefulWidget</code>, permitindo observar como o framework organiza a interface e controla o estado da aplicação.
