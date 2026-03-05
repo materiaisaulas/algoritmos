@@ -94,3 +94,13 @@
   max-width: 900px;
   margin: auto;
 }
+
+blockquote {
+  background: #f8fafc;
+  border-left: 4px solid #5aa469;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 6px;
+  color: #333;
+  font-style: normal;
+}
