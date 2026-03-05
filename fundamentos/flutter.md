@@ -14,16 +14,11 @@ Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativ
 <div style="display:flex; align-items:center; gap:20px;">
 <img src="assets/images/futter_demo.jpg" width="300">
 <div>
-A tela apresentada corresponde ao **exemplo padrão gerado pelo Flutter** ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um **`StatefulWidget`**, permitindo observar como o Flutter organiza a interface e controla o estado da aplicação.
+A tela apresentada corresponde ao <strong>exemplo padrão gerado pelo Flutter</strong> ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um <code>StatefulWidget</code>, permitindo observar como o framework organiza a interface e controla o estado da aplicação.
 
-Na parte superior da tela está a **AppBar**, definida dentro do `Scaffold`. Ela exibe o título **“Flutter Demo Home Page”**, que foi passado como propriedade para o widget `MyHomePage`. A cor da barra segue o tema configurado no aplicativo por meio do `ThemeData`.
+Na parte superior encontra-se a <strong>AppBar</strong>, definida dentro do <code>Scaffold</code>, exibindo o título <strong>Flutter Demo Home Page</strong>.
 
-No centro da tela encontra-se o **corpo da interface**, definido pela propriedade `body`. Um widget `Center` centraliza um `Column`, que organiza os elementos verticalmente. Dentro dessa coluna aparecem dois textos: o primeiro explica que o botão foi pressionado algumas vezes e o segundo mostra o valor da variável `_counter`, que representa o **estado da aplicação**.
-
-No canto inferior direito está o **FloatingActionButton**, que representa a ação principal da tela. Quando pressionado, ele executa a função `_incrementCounter()`, que utiliza `setState()` para incrementar o valor do contador e reconstruir a interface com o novo valor.
-
-Esse exemplo ilustra o funcionamento básico do Flutter: **a interface é reconstruída automaticamente sempre que o estado da aplicação muda**.
-
+No centro da tela está o corpo da interface, onde um <code>Column</code> centralizado apresenta dois textos: uma mensagem explicativa e o valor da variável <code>_counter</code>, que representa o <strong>estado atual da aplicação</strong>.
 
 </div>
 
