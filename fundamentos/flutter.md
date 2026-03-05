@@ -11,18 +11,14 @@ flutter create nome_do_projeto
 
 Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativo.
 
-<div style="display:flex; align-items:center; gap:20px; align-items:flex-start;">
-<img src="assets/images/futter_demo.jpg" width="300">
-<div>
+:::imgtext assets/images/futter_demo.jpg
 A tela apresentada corresponde ao <strong>exemplo padrão gerado pelo Flutter</strong> ao criar um novo projeto. Ela demonstra a estrutura básica de um aplicativo utilizando um <code>StatefulWidget</code>, permitindo observar como o framework organiza a interface e controla o estado da aplicação.
 
 Na parte superior encontra-se a <strong>AppBar</strong>, definida dentro do <code>Scaffold</code>, exibindo o título <strong>Flutter Demo Home Page</strong>.
 
 No centro da tela está o corpo da interface, onde um <code>Column</code> centralizado apresenta dois textos: uma mensagem explicativa e o valor da variável <code>_counter</code>, que representa o <strong>estado atual da aplicação</strong>.
+:::
 
-</div>
-
-</div>
 
 ----
 Todo aplicativo Flutter começa pela função `main()`.
