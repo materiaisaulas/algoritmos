@@ -165,3 +165,7 @@ blockquote {
   }
 
 }
+
+.content {
+  padding-top: 80px;
+}
