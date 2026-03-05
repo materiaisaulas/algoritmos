@@ -24,6 +24,7 @@ No centro da tela está o corpo da interface, onde um <code>Column</code> centra
 
 </div>
 
+----
 Todo aplicativo Flutter começa pela função `main()`.
 
 Ela é o **ponto de entrada da aplicação** e tem a responsabilidade de inicializar o framework Flutter e executar o **widget raiz** do aplicativo.
