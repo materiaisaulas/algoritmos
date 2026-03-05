@@ -10,6 +10,8 @@ flutter create nome_do_projeto
 ```
 
 Esse comando cria um projeto inicial contendo uma estrutura básica de aplicativo.
+<img src="../assets/images/futter_demo.jpg" width="60%">
+![Texto alternativo](../assets/images/futter_demo.jpg)
 
 Todo aplicativo Flutter começa pela função `main()`.
 
