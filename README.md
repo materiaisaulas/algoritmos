@@ -1,86 +1,95 @@
-# Flutter para Iniciantes
+# A Jornada do Estudante na Disciplina
 
-Esta disciplina foi concebida para formar desenvolvedores capazes de construir aplicativos mobile reais, utilizando tecnologias modernas e amplamente adotadas pelo mercado. Nosso objetivo não é apenas aprender ferramentas, mas compreender os fundamentos que sustentam o desenvolvimento front-end mobile, permitindo que vocês construam soluções funcionais, organizadas e profissionalmente estruturadas. Ao longo do semestre, vocês irão desenvolver competências técnicas que vão desde a construção de interfaces até a integração com serviços externos, sempre com foco em qualidade e boas práticas.
-A organização da disciplina foi planejada de forma progressiva e estruturada. Cada etapa foi pensada para construir conhecimento de maneira incremental: iniciaremos pelos fundamentos conceituais, avançaremos para práticas guiadas e, posteriormente, aplicaremos esse conhecimento na construção de um projeto completo. Os critérios de avaliação, as entregas e os objetivos de cada fase serão claramente definidos, garantindo transparência e previsibilidade no processo de aprendizagem.
+Aprender programação é um processo gradual. Assim como em outras áreas do conhecimento, o domínio dessa habilidade ocorre por meio da construção progressiva de conceitos e da prática constante na resolução de problemas. Nesta disciplina, o estudante percorrerá uma jornada estruturada que começa com os fundamentos do pensamento algorítmico e avança até a construção de programas mais organizados e reutilizáveis.
 
-Por fim, esta é uma jornada colaborativa. O desenvolvimento de software é uma atividade prática e interativa, e o aprendizado ocorre de forma mais consistente quando há participação ativa, questionamento e experimentação. Vamos construir juntos: vocês como protagonistas do próprio aprendizado e eu como orientador técnico nesse processo. O compromisso com dedicação, organização e prática constante será o diferencial para que, ao final da disciplina, cada um de vocês tenha desenvolvido um aplicativo funcional e adquirido competências reais para o mercado.
+O primeiro passo dessa jornada consiste em compreender **como transformar problemas em soluções estruturadas**. Na **Unidade I – Fundamentos de Algoritmos e Programação**, o estudante terá contato com os conceitos básicos da lógica de programação, entendendo o que são problemas computacionais e como descrevê-los por meio de algoritmos. Serão apresentados também diferentes formas de representar algoritmos, como **fluxogramas e pseudocódigo**, ferramentas importantes para planejar soluções antes da implementação em uma linguagem de programação.
 
-![Mapa conceitual do Flutter](assets/images/mapa_conceitual_flutter.png)
+Após compreender como estruturar soluções, o estudante avançará para a **Unidade II – Variáveis, Tipos de Dados, Expressões, Atribuição e Estrutura Sequencial**. Nessa etapa, serão apresentados os elementos fundamentais de qualquer programa: **variáveis, tipos de dados e operações**. O estudante aprenderá como armazenar informações, realizar cálculos e organizar instruções em uma sequência lógica de execução. Essa unidade constitui a base para praticamente todos os programas que serão desenvolvidos posteriormente.
 
-## Contextualização Histórica e Tecnológica
-O desenvolvimento mobile consolidou-se como um dos eixos centrais da engenharia de software contemporânea. A popularização dos smartphones após o lançamento do iPhone em 2007 e a expansão do ecossistema Android transformaram profundamente a arquitetura das aplicações distribuídas. Segundo Sommerville (2016), a evolução das plataformas móveis exigiu adaptações nos modelos tradicionais de engenharia de software, especialmente no que se refere à experiência do usuário, restrições de hardware e conectividade intermitente.
+Com esses fundamentos estabelecidos, a disciplina evolui para a **tomada de decisões em programas**, apresentada na **Unidade III – Estruturas de Decisão**. Nesta etapa, os programas passam a ser capazes de analisar condições e executar ações diferentes dependendo das circunstâncias. O estudante aprenderá a utilizar **operadores relacionais e lógicos**, além de estruturas de seleção que permitem construir programas capazes de reagir a diferentes situações.
 
-A computação móvel introduz variáveis que não eram predominantes em sistemas desktop, como limitação energética, fragmentação de dispositivos e necessidade de respostas em tempo quase real. Essas características impactam diretamente decisões arquiteturais e estratégias de otimização.
+A próxima etapa da jornada aborda um dos conceitos mais importantes da programação: **a repetição de instruções**. Na **Unidade IV – Estruturas de Repetição**, o estudante aprenderá como automatizar tarefas que precisam ser executadas diversas vezes. Serão estudados diferentes tipos de estruturas de repetição, permitindo desenvolver algoritmos capazes de processar grandes quantidades de dados ou realizar operações iterativas.
 
-## Paradigma Declarativo e Engenharia de Interfaces
-O paradigma declarativo representa uma evolução significativa em relação ao modelo imperativo tradicional. Em vez de manipular explicitamente o estado da interface, o desenvolvedor descreve o resultado esperado com base nos dados atuais. Fowler (2018) descreve esse modelo como uma forma de reduzir complexidade acidental e melhorar previsibilidade do sistema.
+Depois de dominar decisões e repetições, o estudante avançará para a **Unidade V – Funções**. Nesse momento, os programas começam a ser organizados de maneira mais estruturada. As funções permitem dividir um problema em partes menores, tornando o código mais organizado, reutilizável e fácil de compreender. Esse conceito é fundamental para o desenvolvimento de programas maiores e mais complexos.
 
-Frameworks modernos como React (Facebook, 2023) e Flutter (Google, 2023) adotam esse paradigma, estruturando a interface como função do estado. Essa abordagem aproxima o desenvolvimento de interfaces de princípios funcionais, favorecendo imutabilidade e fluxo unidirecional de dados.
-![Paradigma imperativo vs declarativo](assets/images/imperativo_vs_declarativo.png)
+Por fim, a disciplina apresenta a **Unidade VI – Representação de Listas**, na qual o estudante aprenderá a trabalhar com estruturas que armazenam **coleções de dados**. As listas permitem manipular conjuntos de valores e realizar operações sobre esses dados de maneira eficiente. Esse conhecimento amplia significativamente a capacidade de resolução de problemas computacionais.
 
-## Componentização e Princípios de Design de Software
-A componentização encontra respaldo em princípios clássicos de engenharia de software, como responsabilidade única e baixo acoplamento, descritos por Martin (2017). Interfaces estruturadas em componentes reutilizáveis refletem também padrões de projeto discutidos por Gamma et al. (1994), especialmente no que se refere à composição sobre herança.
+Ao concluir essa jornada, o estudante terá desenvolvido não apenas a capacidade de escrever programas, mas também uma habilidade essencial na área de computação: **pensar de forma algorítmica**, decompondo problemas em etapas claras, estruturadas e executáveis por um computador, o que pode ser resumido de forma abstrata como: 
 
-A arquitetura modular melhora testabilidade, facilita manutenção e reduz impacto de mudanças. Em ambientes mobile, onde atualizações são frequentes e ciclos de release são curtos, essa característica torna-se ainda mais relevante.
-![Componetização](assets/images/componetizacao.png)
+   ```
+   Problema → Algoritmo → Variáveis → Decisão → Repetição → Funções → Listas
+   ```
 
-## Gerenciamento de Estado e Fluxo Unidirecional de Dados
-O conceito de estado é central em aplicações reativas. Segundo a documentação oficial do React (Meta, 2023), o estado representa dados mutáveis que influenciam a renderização de componentes. O fluxo unidirecional de dados contribui para previsibilidade, pois estabelece que mudanças propagam-se de cima para baixo na árvore de componentes.
 
-Em Flutter, o gerenciamento de estado pode assumir diferentes estratégias, como Provider, Riverpod ou BLoC, cada uma fundamentada em princípios de separação de responsabilidades e reatividade controlada (Google, 2023).
+# Introdução à Lógica de Programação
 
-## Renderização Reativa e Eficiência
-A renderização reativa baseia-se em mecanismos de reconciliação que atualizam apenas partes necessárias da interface. No caso do React, utiliza-se o Virtual DOM como estratégia de comparação eficiente (Facebook, 2023). Já o Flutter emprega um mecanismo próprio de reconstrução de widgets altamente otimizado por meio do engine Skia.
+A lógica de programação constitui o fundamento do desenvolvimento de software. Antes de aprender uma linguagem de programação específica, é necessário compreender como estruturar o raciocínio para resolver problemas de forma sistemática. A lógica de programação trata justamente da organização do pensamento necessário para descrever soluções de maneira clara, ordenada e executável por um computador.
 
-Essas estratégias reduzem custo computacional e contribuem para desempenho consistente, fator crítico em dispositivos com recursos limitados.
-![Renderização Reativa](assets/images/renderizacao.png)
+Todo programa de computador é construído a partir de **passos lógicos organizados**, que indicam como um problema deve ser resolvido. Esses passos formam aquilo que chamamos de **algoritmo**.
 
-## Usabilidade e Experiência do Usuário
-A experiência do usuário (UX) constitui dimensão essencial do desenvolvimento mobile. Nielsen (1994) estabelece heurísticas de usabilidade que permanecem relevantes, como visibilidade do status do sistema e consistência. Krug (2014) reforça o princípio da simplicidade cognitiva: interfaces devem exigir o mínimo esforço mental do usuário.
+## O que é um algoritmo
 
-Diretrizes oficiais como o Material Design (Google, 2023) e o Human Interface Guidelines (Apple, 2023) consolidam padrões visuais e comportamentais que orientam desenvolvimento profissional.
-![Renderização Reativa](assets/images/ux.png)
+Um **algoritmo** pode ser entendido como uma sequência finita de instruções ou passos bem definidos, executados em determinada ordem, com o objetivo de resolver um problema ou realizar uma tarefa.
 
-## Arquitetura Mobile e Integração com APIs
-Aplicações mobile modernas operam em arquiteturas distribuídas, consumindo serviços por meio de APIs REST ou GraphQL. Fielding (2000), ao definir o estilo arquitetural REST, estabelece princípios que orientam comunicação cliente-servidor baseada em recursos.
+No contexto da programação, um algoritmo descreve **o procedimento necessário para transformar dados de entrada em resultados desejados**. Essa descrição pode ser feita de diversas formas, como texto estruturado, pseudocódigo ou fluxogramas.
 
-A correta implementação de requisições assíncronas, tratamento de erros e sincronização de dados é parte fundamental da engenharia de aplicações móveis.
+No livro *Introdução à Programação com Python*, os algoritmos são apresentados como a base da programação, pois todo programa implementa um conjunto de passos que resolvem um determinado problema computacional. À medida que os programas se tornam maiores e mais complexos, torna-se ainda mais importante compreender como os algoritmos funcionam e quais são suas aplicações e limitações .
 
-## Abordagens Nativa e Multiplataforma
-O desenvolvimento nativo oferece integração profunda e desempenho máximo, enquanto soluções multiplataforma priorizam produtividade e redução de custos. Segundo relatórios da Stack Overflow Developer Survey (2023), Flutter e React Native figuram entre as tecnologias mais adotadas para desenvolvimento mobile cross-platform.
+Portanto, pode-se afirmar que:
 
-A escolha entre abordagens deve considerar requisitos de desempenho, prazo, equipe e contexto organizacional.
+> Um algoritmo é uma sequência organizada de instruções que descreve como resolver um problema.
 
-A formação em desenvolvimento mobile deve equilibrar fundamentação teórica e prática aplicada. Conforme Pressman & Maxim (2020), a engenharia de software exige integração entre processos, métodos e ferramentas.
+Uma das definições mais influentes de algoritmo foi formulada pelo cientista da computação **Edsger W. Dijkstra**, um dos pioneiros da área de algoritmos e estruturas de dados.
 
-O projeto proposto nesta disciplina segue modelo incremental, aproximando o ambiente acadêmico das práticas profissionais contemporâneas.
-![Abordagem](assets/images/desenvolvimentomobile.png)
+Segundo Dijkstra, um algoritmo pode ser entendido como:
 
-## Referências
+> **uma sequência finita de passos bem definidos e não ambíguos que levam à solução de um problema.**
 
-APPLE. Human Interface Guidelines. Cupertino: Apple Inc., 2023.
+Essa definição destaca três características fundamentais dos algoritmos:
 
-FACEBOOK (META). React Documentation. 2023. Disponível em: https://react.dev/
+**1. Finitude**
+O algoritmo deve terminar após um número limitado de passos.
 
-FIELDING, Roy. Architectural Styles and the Design of Network-based Software Architectures. Doctoral Dissertation, University of California, Irvine, 2000.
+**2. Clareza e precisão**
+Cada instrução precisa ser clara e não ambígua, ou seja, não pode gerar interpretações diferentes.
 
-FOWLER, Martin. Refactoring: Improving the Design of Existing Code. 2. ed. Addison-Wesley, 2018.
+**3. Sequencialidade**
+Os passos devem ser executados em uma ordem lógica bem definida.
 
-GAMMA, Erich et al. Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley, 1994.
+Essas propriedades garantem que um algoritmo possa ser **compreendido, executado e eventualmente transformado em um programa de computador**.
 
-GOOGLE. Flutter Documentation. 2023. Disponível em: https://docs.flutter.dev/
+Embora sejam muito utilizados na computação, algoritmos não são exclusivos dessa área. Muitas atividades do cotidiano podem ser descritas como algoritmos.
 
-GOOGLE. Material Design Guidelines. 2023. Disponível em: https://m3.material.io/
+Por exemplo, uma receita culinária pode ser vista como um algoritmo:
 
-KRUG, Steve. Don't Make Me Think. 3. ed. New Riders, 2014.
+1. Separar os ingredientes
+2. Misturar os ingredientes na ordem indicada
+3. Aquecer o forno
+4. Assar por determinado tempo
+5. Servir
 
-MARTIN, Robert C. Clean Architecture. Prentice Hall, 2017.
+Cada passo representa uma instrução clara que conduz a um resultado final.
 
-NIELSEN, Jakob. Usability Engineering. Morgan Kaufmann, 1994.
+Da mesma forma, um **programa de computador nada mais é do que a implementação de um algoritmo em uma linguagem de programação**, como Python, Java ou C.
 
-PRESSMAN, Roger; MAXIM, Bruce. Software Engineering: A Practitioner's Approach. 9. ed. McGraw-Hill, 2020.
+## Algoritmos e programas
 
-SOMMERVILLE, Ian. Software Engineering. 10. ed. Pearson, 2016.
+É importante distinguir dois conceitos:
 
-STACK OVERFLOW. Developer Survey 2023. Disponível em: https://survey.stackoverflow.co/2023/
+**Algoritmo**
+É a descrição lógica da solução de um problema.
+
+**Programa**
+É a implementação desse algoritmo em uma linguagem de programação executável por um computador.
+
+Em outras palavras, o algoritmo representa **a ideia da solução**, enquanto o programa representa **a execução dessa ideia por meio de código**.
+
+Por esse motivo, no estudo inicial da programação, é comum aprender primeiro **como construir algoritmos**, utilizando formas de representação como:
+
+* **fluxogramas**
+* **pseudocódigo**
+* **descrições estruturadas**
+
+Somente depois essa lógica é traduzida para uma linguagem de programação.
+
 

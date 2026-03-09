@@ -1,0 +1,24 @@
+<svg width="760" height="220" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .t{font:700 22px Arial}
+        .txt{font:16px Arial}
+        .num{font:700 16px Arial}
+        .box{fill:#eef2ff;stroke:#3b82f6;stroke-width:2}
+</style>
+
+    <text x="30" y="35" class="t">Memória com endereços</text>
+
+    <rect x="60" y="90" width="80" height="60" class="box" />
+    <rect x="140" y="90" width="80" height="60" class="box" />
+    <rect x="220" y="90" width="80" height="60" class="box" />
+    <rect x="300" y="90" width="80" height="60" class="box" />
+    <rect x="380" y="90" width="80" height="60" class="box" />
+
+    <text x="90" y="80" class="num">100</text>
+    <text x="170" y="80" class="num">101</text>
+    <text x="250" y="80" class="num">102</text>
+    <text x="330" y="80" class="num">103</text>
+    <text x="410" y="80" class="num">104</text>
+
+    <text x="60" y="180" class="txt">cada posição possui um endereço que identifica sua localização</text>
+</svg>

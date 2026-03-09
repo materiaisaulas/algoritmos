@@ -1,3 +1,5 @@
+docsify serve 
+
 ## Stateless
 
 Vamos retomar o exemplo que aparece quando criamos um projeto Flutter utilizando o comando: flutter create nome_do_projeto
@@ -100,6 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
 ´´´´
 ````
 
+![texto alternativo](URL_ou_caminho_da_imagem "título opcional")
+
 
 :::imgtext images/flutter_architecture.png
 ### Arquitetura do Flutter
@@ -126,3 +130,210 @@ Isso pode tornar o layout mais complexo e reduzir a legibilidade do código.
 :::info
 O sistema de layout do Flutter é baseado em `BoxConstraints`, que define limites mínimos e máximos de largura e altura para cada widget.
 :::
+
+A seguir estão **comandos matemáticos úteis em Markdown com KaTeX/LaTeX**, especialmente adequados para **apostilas de algoritmos e programação**. Vou mostrar também **como escrever fórmulas dentro do texto** e **formas de representar multiplicação**.
+
+---
+
+# 1. Fórmulas no meio do texto (inline)
+
+Use **`$ ... $`**.
+
+```markdown
+A área de um círculo depende do raio $r$ e é calculada pela fórmula $A = \pi r^2$.
+```
+
+Resultado:
+
+A área de um círculo depende do raio (r) e é calculada pela fórmula (A = \pi r^2).
+
+---
+
+# 2. Fórmulas centralizadas (display)
+
+Use **`$$ ... $$`**.
+
+```markdown
+$$A = \pi r^2$$
+```
+
+Resultado:
+
+[
+A = \pi r^2
+]
+
+---
+
+# 3. Multiplicação
+
+Existem três formas comuns.
+
+### a) Multiplicação implícita (mais comum em matemática)
+
+```markdown
+$A = \pi r^2$
+```
+
+[
+A = \pi r^2
+]
+
+---
+
+### b) Símbolo de multiplicação
+
+```markdown
+$A = \pi \times r^2$
+```
+
+[
+A = \pi \times r^2
+]
+
+---
+
+### c) Ponto de multiplicação
+
+Muito usado em álgebra.
+
+```markdown
+$A = \pi \cdot r^2$
+```
+
+[
+A = \pi \cdot r^2
+]
+
+---
+
+# 4. Frações
+
+```markdown
+$$\frac{a+b}{2}$$
+```
+
+[
+\frac{a+b}{2}
+]
+
+Exemplo no texto:
+
+```markdown
+A média aritmética é dada por $\frac{a+b}{2}$.
+```
+
+---
+
+# 5. Raiz quadrada
+
+```markdown
+$$\sqrt{x}$$
+```
+
+[
+\sqrt{x}
+]
+
+Exemplo no texto:
+
+```markdown
+A raiz quadrada de um número $x$ é representada por $\sqrt{x}$.
+```
+
+---
+
+# 6. Potências
+
+```markdown
+$$x^2$$
+```
+
+[
+x^2
+]
+
+Potência geral:
+
+```markdown
+$$x^n$$
+```
+
+[
+x^n
+]
+
+---
+
+# 7. Subscritos (muito usados em algoritmos)
+
+```markdown
+$$a_i$$
+```
+
+[
+a_i
+]
+
+Exemplo no texto:
+
+```markdown
+Considere o elemento $a_i$ de um vetor.
+```
+
+---
+
+# 8. Somatório
+
+Muito usado em análise de algoritmos.
+
+```markdown
+$$\sum_{i=1}^{n} i$$
+```
+
+[
+\sum_{i=1}^{n} i
+]
+
+Exemplo no texto:
+
+```markdown
+A soma dos primeiros $n$ números naturais é $\sum_{i=1}^{n} i$.
+```
+
+---
+
+# 9. Exemplo completo (como ficaria na apostila)
+
+```markdown
+A área de um círculo depende do raio $r$ e pode ser calculada por
+
+$$A = \pi r^2$$
+
+onde:
+
+- $A$ é a área do círculo  
+- $r$ é o raio  
+- $\pi \approx 3.14159$
+
+Outra forma equivalente de escrever a multiplicação é
+
+$$A = \pi \cdot r^2$$
+```
+
+---
+
+💡 **Sugestão didática para sua apostila de algoritmos**
+
+Para iniciantes, recomendo usar principalmente:
+
+* potências → `$x^2$`
+* multiplicação → `$a \times b$`
+* frações → `$\frac{a+b}{2}$`
+* índices → `$a_i$`
+
+porque esses aparecem muito em:
+
+* complexidade de algoritmos
+* fórmulas matemáticas
+* análise de estruturas de dados.

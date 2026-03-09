@@ -16,18 +16,24 @@ body {
 /* ===============================
    TOPBAR
 ================================ */
+
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
+
   background: #4a7bd0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 20px;
+
   color: white;
+
   z-index: 1000;
 }
 
@@ -45,6 +51,7 @@ body {
 /* ===============================
    CAMPO DE BUSCA
 ================================ */
+
 .search input {
   width: 340px;
   padding: 8px 14px;
@@ -53,9 +60,11 @@ body {
   font-size: 14px;
 }
 
+
 /* ===============================
    ÁRVORE DA SIDEBAR
 ================================ */
+
 .sidebar-nav > ul > li > p {
   font-weight: 600;
   font-size: 15px;
@@ -73,8 +82,6 @@ body {
   background: #eef2ff;
 }
 
-/* item ativo */
-
 .sidebar-nav li.active > a {
   background: #eef2ff;
   border-radius: 6px;
@@ -89,6 +96,7 @@ body {
   padding-left: 12px;
 }
 
+
 /* ===============================
    CONTEÚDO PRINCIPAL
 ================================ */
@@ -101,43 +109,71 @@ body {
 /* ===============================
    ÁREA DE LEITURA (ESTILO LIVRO)
 ================================ */
+
 .markdown-section {
   max-width: 880px;
   margin: auto;
   padding: 40px 20px;
+
   font-size: 18px;
   line-height: 1.8;
+}
+
+.markdown-section p {
+  margin-bottom: 18px;
+  max-width: 75ch;
+}
+
+
+/* ===============================
+   LISTAS
+================================ */
+
+.markdown-section ul,
+.markdown-section ol {
+  margin: 16px 0 20px 26px;
+}
+
+.markdown-section li {
+  margin: 6px 0;
+  line-height: 1.7;
 }
 
 
 /* ===============================
    TÍTULOS
 ================================ */
+
 .markdown-section h1 {
   font-size: 34px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 24px;
   font-weight: 600;
 }
 
 .markdown-section h2 {
   font-size: 28px;
-  margin-top: 45px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .markdown-section h3 {
   font-size: 22px;
-  margin-top: 30px;
+  margin-top: 34px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.markdown-section p {
-  margin-bottom: 18px;
+.markdown-section strong {
+  font-weight: 600;
 }
 
 
 /* ===============================
    BLOCKQUOTE
 ================================ */
+
 blockquote {
   background: #f8fafc;
   border-left: 4px solid #5aa469;
@@ -149,38 +185,53 @@ blockquote {
 
 
 /* ===============================
-   CÓDIGO
+   CÓDIGO - BLOCO
 ================================ */
+
 .markdown-section pre {
   background: #1f2937;
   border-radius: 10px;
-  padding: 18px 20px;
-  margin: 25px 0;
+
+  padding: 18px 22px;
+
+  margin: 28px 0;
+
   overflow-x: auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .markdown-section pre code {
   color: #f8fafc;
   font-size: 15px;
   line-height: 1.6;
+
   font-family: "Fira Code", "JetBrains Mono", monospace;
+
   background: transparent;
   display: block;
   padding: 0;
 }
 
+
+/* ===============================
+   CÓDIGO INLINE (variáveis)
+================================ */
+
 .markdown-section code {
-  font-family: "Fira Code", monospace;
-  background: #eef2f7;
-  padding: 2px 6px;
-  border-radius: 4px;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #b91c1c;
+  background: #f3f4f6;
+  padding: 3px 7px;
 }
 
 
 /* ===============================
    HIGHLIGHT DE SINTAXE
 ================================ */
+
 .token.keyword {
   color: #f97316;
 }
@@ -195,8 +246,18 @@ blockquote {
 
 
 /* ===============================
+   FÓRMULAS MATEMÁTICAS
+================================ */
+
+.katex-display {
+  margin: 30px 0;
+}
+
+
+/* ===============================
    IMAGEM + TEXTO
 ================================ */
+
 .doc-image-text {
   display: flex;
   gap: 24px;
@@ -207,7 +268,8 @@ blockquote {
 .doc-image-text img {
   width: 320px;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .doc-image-text-content {
@@ -218,6 +280,7 @@ blockquote {
 /* ===============================
    CAIXAS DIDÁTICAS
 ================================ */
+
 .doc-tip {
   background: #e8f5e9;
   border-left: 5px solid #4caf50;
@@ -242,10 +305,20 @@ blockquote {
   border-radius: 6px;
 }
 
+.doc-tip > strong,
+.doc-info > strong,
+.doc-warning > strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+
 /* ===============================
    RESPONSIVO
 ================================ */
+
 @media (max-width: 900px) {
+
   .doc-image-text {
     flex-direction: column;
   }
@@ -259,3 +332,160 @@ blockquote {
   }
 
 }
+
+
+/* ===============================
+   BLOCOS DIDÁTICOS AVANÇADOS
+================================ */
+
+
+/* DEFINIÇÃO */
+
+.doc-definition {
+  background: #f3f4f6;
+  border-left: 5px solid #6b7280;
+  padding: 16px 18px;
+  margin: 26px 0;
+  border-radius: 6px;
+}
+
+
+/* EXEMPLO */
+
+.doc-example {
+  background: #eef2ff;
+  border-left: 5px solid #6366f1;
+  padding: 16px 18px;
+  margin: 26px 0;
+  border-radius: 6px;
+}
+
+
+/* ALGORITMO */
+
+.doc-algorithm {
+  background: #f8fafc;
+  border-left: 5px solid #0ea5e9;
+  padding: 16px 18px;
+  margin: 28px 0;
+  border-radius: 6px;
+}
+
+
+/* EXERCÍCIO */
+
+.doc-exercise {
+  background: #fff7ed;
+  border-left: 5px solid #f97316;
+  padding: 16px 18px;
+  margin: 26px 0;
+  border-radius: 6px;
+}
+
+
+/* TÍTULOS DOS BLOCOS */
+
+.doc-definition > strong,
+.doc-example > strong,
+.doc-algorithm > strong,
+.doc-exercise > strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+
+/* código dentro do algoritmo */
+
+.doc-algorithm pre {
+  background: #111827;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.doc-algorithm code {
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 15px;
+  color: #f9fafb;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+/* TEXTO EXPLICATIVO */
+
+.doc-algorithm-text,
+.doc-exercise-text {
+  margin-bottom: 14px;
+  color: #374151;
+  line-height: 1.7;
+}
+/* 
+.doc-question {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 6px 10px;
+  margin: 18px 0;
+}
+
+.doc-question-number {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 600;
+}
+
+.doc-question-text {
+  grid-column: 2;
+}
+
+.doc-question-text p:first-child {
+  margin-top: 0;
+}
+
+.doc-question-text pre {
+  margin-top: 12px;
+} */
+
+/* ===============================
+   LISTA DE EXERCÍCIOS (layout livro)
+================================ */
+
+.doc-question {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 4px 10px;
+
+  margin: 22px 0;
+}
+
+.doc-question-number {
+  font-weight: 600;
+  font-size: 17px;
+  color: #1d4ed8;
+}
+
+.doc-question-text {
+  line-height: 1.7;
+}
+
+.doc-question-text p:first-child {
+  margin-top: 0;
+}
+
+.doc-question-text pre {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.doc-question-text blockquote {
+  margin: 10px 0;
+}
+
+.doc-question + .doc-question {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+

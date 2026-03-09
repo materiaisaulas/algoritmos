@@ -1,10 +1,10 @@
-- Flutter Book 
+- Algorimtos e programação
   - [Introdução](README.md)
 
-- Fundamentos
-  - [Fundamentos](fundamentos/fundamentos.md)
+- Algorimtos
+  - [Fundamentos de algoritmos e programação](fundamentos/fundamentos.md)
+  - [Váriáveis, tipos de dados](variaveis/variaveis_constantes.md)
   - [Layout parte 1](fundamentos/layout.md)
-  - [Explicando o código](fundamentos/explicandocodigo.md)
   - [Refatorando o código](fundamentos/refatorando.md)
   - [Constraints](fundamentos/constraints.md)
   - [Stateless/StateFul](fundamentos/stateless_stateful.md)

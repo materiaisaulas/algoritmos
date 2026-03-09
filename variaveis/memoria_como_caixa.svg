@@ -1,0 +1,19 @@
+<svg width="760" height="200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .t{font:700 22px Arial}
+        .txt{font:16px Arial}
+        .box{fill:#f8fafc;stroke:#334155;stroke-width:2}
+</style>
+
+    <text x="30" y="35" class="t">Representação simplificada da memória</text>
+
+    <rect x="60" y="80" width="80" height="60" class="box" />
+    <rect x="140" y="80" width="80" height="60" class="box" />
+    <rect x="220" y="80" width="80" height="60" class="box" />
+    <rect x="300" y="80" width="80" height="60" class="box" />
+    <rect x="380" y="80" width="80" height="60" class="box" />
+    <rect x="460" y="80" width="80" height="60" class="box" />
+    <rect x="540" y="80" width="80" height="60" class="box" />
+
+    <text x="60" y="165" class="txt">cada caixa representa um espaço de memória</text>
+</svg>

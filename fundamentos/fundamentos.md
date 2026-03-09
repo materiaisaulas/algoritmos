@@ -1,231 +1,263 @@
-## Introdução
-O Flutter é um framework de desenvolvimento multiplataforma criado pelo Google que permite construir aplicações para Android, iOS, Web e Desktop a partir de uma única base de código. Diferentemente de frameworks híbridos tradicionais, o Flutter não utiliza componentes nativos do sistema operacional para renderizar a interface. Ele possui seu próprio motor gráfico, baseado na biblioteca Skia, responsável por desenhar diretamente cada pixel na tela.
+### Problemas e soluções
 
-Essa decisão arquitetural garante consistência visual entre plataformas e reduz dependência das variações de implementação nativa. Segundo a documentação oficial do Flutter (Google, 2023), essa abordagem permite alto desempenho e controle preciso sobre layout e animações.
+O ponto de partida para o estudo de algoritmos e programação é a compreensão de que a computação surge da necessidade de **resolver problemas de forma sistemática**. Em termos gerais, um problema pode ser entendido como uma situação em que existe um estado inicial, um objetivo a ser alcançado e um conjunto de restrições ou condições que precisam ser respeitadas. No contexto da computação, a resolução desses problemas ocorre por meio de procedimentos bem definidos, que posteriormente podem ser executados por um computador.
 
-### Como o Flutter Renderiza a Interface
-Conforme apresentado no material base, o Flutter opera com três árvores sincronizadas:
+No processo de aprendizagem da programação, é importante compreender que o foco inicial não está apenas na linguagem utilizada, mas no desenvolvimento da **capacidade de estruturar soluções lógicas** para diferentes tipos de problemas. O livro *Introdução à Programação com Python* enfatiza exatamente esse aspecto: seu objetivo principal é ensinar a **programar e desenvolver raciocínio lógico**, independentemente da linguagem utilizada, utilizando Python apenas como meio didático para exercitar esse pensamento algorítmico .
 
-#### Widget tree
-Widgets são descrições imutáveis da interface. Eles representam configuração, não estado mutável.
-Everything is a widget" — esse é o princípio fundamental do Flutter.
+A formulação de problemas computacionais pode ser observada em situações simples do cotidiano. Por exemplo, calcular a média de notas de um estudante, determinar se uma pessoa pode obter um empréstimo ou ordenar uma lista de números são todos exemplos de problemas que podem ser resolvidos por meio de procedimentos lógicos. Em programação, esses procedimentos são descritos como **sequências de passos bem definidos**, que podem ser interpretados e executados por um computador.
 
-Exemplo simples:
+Nesse sentido, **George Pólya**, matemático conhecido por seus estudos sobre resolução de problemas, apresenta uma abordagem amplamente utilizada no ensino de lógica e algoritmos. Segundo Pólya (1945), o processo de resolução de um problema envolve quatro etapas fundamentais: compreender o problema, elaborar um plano de solução, executar o plano e revisar o resultado obtido. Essa abordagem é particularmente relevante no ensino de programação, pois incentiva o estudante a analisar cuidadosamente o problema antes de iniciar a implementação de uma solução.
 
-```dart 
-Text('Olá Flutter!');
+![Modelo de Pólya 1945](modelo_polya.png)
+
+Outro autor clássico nessa área é **Edsger W. Dijkstra**, um dos pioneiros da ciência da computação. Dijkstra enfatiza que o desenvolvimento de algoritmos exige **precisão lógica e clareza na descrição dos passos que levam à solução**. Para o autor, um algoritmo deve ser compreendido como uma sequência finita de instruções que transforma um conjunto de dados de entrada em um resultado desejado (DIJKSTRA, 1976). Essa visão reforça a importância de estruturar o raciocínio antes da implementação em uma linguagem de programação.
+
+![Modelo de Pólya 1945](disktra_polya.png)
+Fonte: construida com auxílio de IA (GPT)
+
+Assim, a resolução de problemas em programação pode ser entendida como um processo composto por três elementos fundamentais:
+
+* **o problema**, que representa a situação ou desafio a ser resolvido;
+* **o algoritmo**, que descreve a sequência lógica de passos necessários para chegar à solução;
+* **o programa**, que é a implementação desse algoritmo em uma linguagem que o computador possa executar.
+
+Compreender essa relação é essencial para o aprendizado inicial da programação. Antes de escrever código, o estudante precisa aprender a **analisar o problema, decompor suas partes e organizar uma estratégia lógica de solução**. Somente após essa etapa é que a implementação em uma linguagem de programação passa a fazer sentido.
+
+Dessa forma, o estudo de algoritmos pode ser visto como o desenvolvimento de uma forma estruturada de pensamento. Ao longo da disciplina, os estudantes aprenderão a transformar problemas do cotidiano em soluções computacionais, utilizando diferentes formas de representação, como **pseudocódigo, fluxogramas e programas executáveis**.
+
+# Notação
+
+Após compreender que um **algoritmo é uma sequência finita de passos organizados para resolver um problema**, surge uma questão importante no processo de aprendizagem de programação: **como representar esses passos de forma clara antes de escrever um programa em uma linguagem específica**.
+
+No desenvolvimento de software, é comum que o programador primeiro **estruture a lógica da solução** e somente depois a implemente em uma linguagem como Python, Java ou C. Para isso, utilizam-se formas de representação conhecidas como **notações de algoritmo**. Entre as mais utilizadas no ensino de lógica de programação estão:
+
+* **Fluxogramas**
+* **Pseudocódigo**
+
+Essas formas de representação permitem que a lógica do algoritmo seja compreendida independentemente da linguagem de programação utilizada.
+
+# Fluxogramas
+
+O **fluxograma** é uma representação gráfica de um algoritmo.
+Nele, cada etapa da solução é representada por **símbolos geométricos conectados por setas**, que indicam o fluxo de execução do algoritmo.
+
+O objetivo principal do fluxograma é **visualizar a sequência de operações e decisões que compõem a solução de um problema**.
+
+Os fluxogramas utilizados na representação de algoritmos baseiam-se em convenções padronizadas internacionalmente. Entre as principais referências está a norma **ISO 5807:1985**, que define símbolos e convenções para a documentação gráfica de processos de informação, incluindo diagramas de fluxo de programas e de dados. Essa norma consolidou especificações anteriores, entre elas a norma **ANSI X3.5 (1970)**, estabelecendo diretrizes para a representação visual da sequência de operações e da estrutura lógica empregada no desenvolvimento de programas de computador. A Figura a seguir apresenta alguns dos símbolos mais utilizados na representação de fluxogramas.
+![Representação gráfica fluxograma](simbolos_fluxograma.png)
+
+Mesmo que existam pequenas variações entre ferramentas, os símbolos fundamentais permanecem os mesmos, as setas indicam **a ordem de execução das etapas do algoritmo**, conectando os símbolos do fluxograma, isto, é são responsáveis por indicar **a direção do fluxo do processo dentro do algoritmo**. 
+
+![Exemplo de fluxograma](exemplo_fluxo_grama.png)
+
+
+O Processamento, representa qualquer **cálculo, operação ou ação executada pelo algoritmo**.
+
+Exemplos de operações:
+
+* somar dois números
+* calcular uma média
+* atualizar uma variável
+
+A Entrada / Saída de dados, representa **dados fornecidos pelo usuário ou apresentados pelo programa**.
+
+Exemplos:
+
+* ler um número digitado pelo usuário
+* exibir um resultado na tela
+
+No guia de fluxogramas, esse símbolo é descrito como a representação de **dados que entram ou são exibidos ao usuário durante o processamento**. 
+
+O símbolo de Decisão, representa um **ponto de decisão no algoritmo**, no qual uma condição é avaliada e o fluxo pode seguir por caminhos diferentes, em geral está associado a estruturas do tipo se...então. No fluxograma, isso aparece como um **losango com dois caminhos possíveis**.
+
+### Exemplo de Fluxograma
+
+Problema:
+Ler dois números e mostrar qual é o maior, fluxograma simplificado:
+![O maior entre A e B](maior_entre_dois.png)
+
+Esse tipo de representação facilita compreender o funcionamento do algoritmo **antes de implementar o código**.
+
+---
+# Pseudocódigo
+
+Outra forma muito utilizada para representar algoritmos é o **pseudocódigo**.
+
+O pseudocódigo consiste em uma descrição textual estruturada da lógica de um algoritmo, escrita de maneira semelhante à linguagem natural, porém organizada de forma próxima à estrutura das linguagens de programação. Seu principal objetivo é permitir que a lógica da solução seja compreendida antes da implementação em uma linguagem específica, como Python, Java ou C.
+
+Essa forma de representação utiliza comandos simples que descrevem operações fundamentais de um algoritmo, como:
+
+* leitura de dados
+* atribuição de valores
+* tomada de decisões
+* repetição de operações
+* apresentação de resultados
+
+No ensino de programação no Brasil, é comum utilizar uma forma de pseudocódigo chamada **Portugol**, na qual as instruções são escritas em português. Essa abordagem facilita o aprendizado inicial, pois permite que o estudante concentre sua atenção no **raciocínio lógico do algoritmo**, sem a complexidade sintática de linguagens de programação reais.
+
+Uma das ferramentas educacionais utilizadas para esse fim é o **G-Portugol**, um ambiente de desenvolvimento voltado ao ensino de algoritmos. O sistema permite escrever, executar e testar algoritmos utilizando comandos estruturados em português, aproximando o estudante dos conceitos da programação estruturada, como entrada e saída de dados, estruturas condicionais e estruturas de repetição (G-PORTUGOL, 2010). 
+
+---
+
+#### Estrutura básica de um algoritmo em Portugol
+
+De acordo com a organização apresentada no manual do **G-Portugol**, um algoritmo geralmente é composto por três partes principais:
+
+1. **identificação do algoritmo**
+2. **bloco de instruções**
+3. **término do algoritmo**
+
+A estrutura geral pode ser representada da seguinte forma:
+
+```
+Algoritmo nome_do_algoritmo
+
+Inicio
+
+   comandos do algoritmo
+
+Fim
 ```
 
-#### Element tree
-Elements formam uma árvore intermediária que conecta Widgets (imutáveis) aos RenderObjects (mutáveis).
-Eles são responsáveis por:
-- Gerenciar ciclo de vida
-- Preservar estado
-- Decidir quando atualizar RenderObjects
+O bloco delimitado por **Inicio** e **Fim** contém as instruções que serão executadas pelo algoritmo.
 
-O desenvolvedor raramente interage diretamente com Elements, mas eles são centrais para a eficiência do framework.
+---
 
-#### RenderObject tree
-RenderObjects realizam o trabalho pesado:
-- Layout: cálculo de tamanho e posição
-- Paint: desenho dos pixels
-- Hit Testing: detecção de interações
+#### Comandos básicos do Portugol
 
-Diferente dos Widgets, RenderObjects são mutáveis e mais custosos. O Flutter reutiliza-os sempre que possível.
-Esse processo é detalhada na documentação oficial do Flutter: https://docs.flutter.dev/resources/architectural-overview
+Os algoritmos escritos em Portugol utilizam comandos simples que representam operações comuns em programação.
 
-![Renderização Reativa](../assets/images/as_tres_arvores.png)
+#### Entrada de dados
 
-#### Dart Essencial para Flutter
-Flutter utiliza a linguagem Dart, que combina tipagem estática com sintaxe moderna.
-Variáveis: 
-```dart 
-var, final e const
-var nome = 'Flutter';
-nome = 'Dart'; // permitido
+O comando **leia** é utilizado para receber dados fornecidos pelo usuário durante a execução do algoritmo.
 
-final hora = DateTime.now();
-// hora = DateTime.now(); // erro
+Exemplo:
 
-const pi = 3.14159265;
+```
+leia numero
 ```
 
-- var → mutável
-- final → imutável em tempo de execução
-- const → constante em tempo de compilação
+Nesse caso, o algoritmo solicita que o usuário digite um valor que será armazenado na variável **numero**.
 
-Referência oficial: https://dart.dev/language/variables
+---
 
-#### Funções em Dart
-Dart trata funções como objetos de primeira classe.
-```dart 
-String saudar(String nome) {
-  return 'Olá, $nome!';
-}
+#### Saída de dados
+
+O comando **escreva** é utilizado para exibir informações ou resultados na tela.
+
+Exemplo:
+
+```
+escreva resultado
 ```
 
-Arrow function:
-```dart 
-String saudar(String nome) => 'Olá, $nome!';
-Muito utilizadas em callbacks e builders.
+Esse comando permite apresentar mensagens ou valores calculados pelo algoritmo.
+
+---
+
+#### Atribuição de valores
+
+A atribuição é utilizada para armazenar ou atualizar valores em uma variável.
+
+Exemplo:
+
 ```
-Referência: https://dart.dev/language/functions
-
-#### Classes
-
-Flutter é fortemente orientado a objetos.
-```dart
-class Usuario {
-  String nome;
-  int idade;
-
-  Usuario(this.nome, this.idade);
-
-  void apresentar() {
-    print('Olá, sou $nome');
-  }
-}
+soma <- A + B
 ```
 
-Referência:https://dart.dev/language/classes
+Nesse caso, o resultado da soma entre **A** e **B** é armazenado na variável **soma**.
 
-#### main() e runApp()
-Todo aplicativo Flutter começa com:
-```dart
-void main() {
-  runApp(MeuApp());
-}
+---
+
+#### Estruturas condicionais
+
+Estruturas condicionais permitem que o algoritmo tome decisões com base em uma condição lógica.
+
+A estrutura mais comum é a instrução **se**.
+
+Exemplo:
+
 ```
-runApp() inicializa o framework e injeta o widget raiz na árvore. O widget raiz geralmente é MaterialApp ou CupertinoApp.
-
-Referência:https://api.flutter.dev/flutter/widgets/runApp.html
-
-#### StatelessWidget vs StatefulWidget
-StatelessWidget
-
-Usado quando a UI não depende de estado mutável.
-```dart
-class Saudacao extends StatelessWidget {
-  final String nome;
-
-  Saudacao({required this.nome});
-
-  @override
-  Widget build(BuildContext context) {
-    return Text('Olá, $nome!');
-  }
-}
-```
-:::tip
-Características:
-
-- Imutável
-- Simples
-- Fácil de testar
-- Melhor performance
-::: 
-
-#### StatefulWidget
-
-Usado quando há estado que muda ao longo do tempo.
-```dart 
-class Contador extends StatefulWidget {
-  @override
-  _ContadorState createState() => _ContadorState();
-}
-
-class _ContadorState extends State<Contador> {
-  int _numero = 0;
-
-  void _incrementar() {
-    setState(() {
-      _numero++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('Contador: $_numero'),
-        ElevatedButton(
-          onPressed: _incrementar,
-          child: Text('Incrementar'),
-        ),
-      ],
-    );
-  }
-}
+se A > B então
+    escreva A
+senão
+    escreva B
+fimse
 ```
 
-#### setState()
+Nesse caso, o algoritmo verifica qual número é maior e exibe o valor correspondente.
 
-setState() informa ao Flutter que o estado interno mudou e que o widget precisa ser reconstruído.
+---
 
-:::tip
-Regras importantes:
+#### Exemplo completo de pseudocódigo
 
-- Modificações devem ocorrer dentro do callback do setState()
-- Fora dele, a UI não será reconstruída
+O exemplo a seguir apresenta um algoritmo simples que lê dois números e mostra qual deles é o maior.
 
-Referência:https://api.flutter.dev/flutter/widgets/State/setState.html
-:::
+```
+Algoritmo maior_numero
 
-:::tip
-Quando Usar Cada Tipo?
+Inicio
 
-Regra prática:
-Comece com StatelessWidget
+   leia A
+   leia B
 
-Converta para StatefulWidget apenas se houver:
+   se A > B então
+       escreva A
+   senão
+       escreva B
+   fimse
 
-- Interatividade
-- Formulários
-- Animações
-- Dados que mudam ao longo do tempo
+Fim
+```
 
-Essa abordagem reduz complexidade acidental.
-:::
+Nesse exemplo aparecem alguns comandos fundamentais do Portugol.
 
-#### Arquitetura do Flutter 
+| Comando | Função                          |
+| ------- | ------------------------------- |
+| leia    | recebe dados do usuário         |
+| escreva | apresenta informações na tela   |
+| se      | avalia uma condição lógica      |
+| senão   | define o caminho alternativo    |
+| fimse   | encerra a estrutura condicional |
 
-A arquitetura do Flutter pode ser compreendida como um sistema organizado em três camadas principais: **Framework**, **Engine** e **Embedder**. Essa organização em níveis permite separar responsabilidades e garantir que o desenvolvimento da aplicação seja realizado de forma produtiva, enquanto as camadas inferiores cuidam da execução eficiente e da integração com o sistema operacional.
+Essas estruturas representam os **elementos básicos da programação estruturada**, que serão utilizados ao longo da disciplina para desenvolver algoritmos cada vez mais complexos.
 
-A camada superior é o **Flutter Framework**, desenvolvido principalmente em **Dart**. É nessa camada que os desenvolvedores constroem suas aplicações. O framework oferece um conjunto de bibliotecas e componentes que permitem descrever a interface do usuário de forma declarativa. Entre essas bibliotecas estão **Material** e **Cupertino**, que implementam os sistemas de design utilizados respectivamente no Android e no iOS. Abaixo dessas bibliotecas estão os **Widgets**, que constituem os elementos fundamentais da interface. Cada parte da tela é construída por meio da composição de widgets, formando uma estrutura hierárquica que representa a interface completa da aplicação.
+---
 
-O framework também inclui outros módulos importantes que dão suporte ao funcionamento da interface. A camada de **Rendering** é responsável por organizar como os elementos visuais são posicionados e exibidos na tela. Já os módulos de **Animation**, **Painting** e **Gestures** oferecem suporte para animações, desenho gráfico e detecção de interações do usuário, como toques e gestos. Na base do framework encontra-se a camada **Foundation**, que fornece utilidades essenciais, como estruturas de dados, gerenciamento de estado e ferramentas que são utilizadas por todas as partes do sistema.
+# Comparação entre Fluxograma e Pseudocódigo
 
-Abaixo do framework está o **Flutter Engine**, implementado principalmente em **C e C++**. Essa camada executa as tarefas de baixo nível necessárias para que a interface descrita no framework possa ser renderizada na tela. O engine contém o sistema de **renderização gráfica**, o gerenciamento do **runtime do Dart**, o agendamento de quadros da interface (**frame scheduling**) e o processamento de eventos vindos do sistema operacional. Ele também inclui mecanismos como **frame pipelining**, **text layout** e **asset resolution**, que permitem organizar o fluxo de renderização, processar textos e carregar recursos da aplicação.
+| Característica | Fluxograma                                | Pseudocódigo                          |
+| -------------- | ----------------------------------------- | ------------------------------------- |
+| Forma          | Gráfica                                   | Textual                               |
+| Objetivo       | Visualizar o fluxo do algoritmo           | Descrever a lógica passo a passo      |
+| Uso didático   | Muito útil para iniciantes                | Mais próximo da programação real      |
+| Complexidade   | Pode ficar grande em algoritmos complexos | Escala melhor para algoritmos maiores |
 
-Um componente importante presente no engine é o suporte aos **Platform Channels**, que permitem que o código Dart se comunique com funcionalidades nativas do sistema operacional. Isso possibilita, por exemplo, acessar câmera, sensores, sistema de arquivos ou serviços específicos da plataforma.
+Na prática, **ambos podem ser utilizados para planejar a solução de um problema antes da implementação do programa**.
 
-A camada inferior da arquitetura é chamada de **Embedder**, que é específica para cada plataforma. O embedder conecta o Flutter ao sistema operacional no qual a aplicação está sendo executada. Ele é responsável por configurar a superfície de renderização da aplicação (**render surface setup**), integrar **plugins nativos**, gerenciar **threads** e garantir a comunicação com o **event loop** do sistema. Além disso, o embedder também participa do processo de **empacotamento da aplicação**, permitindo que ela seja distribuída nas diferentes plataformas.
+---
 
-Essa separação em camadas permite que o Flutter ofereça uma experiência consistente em múltiplos sistemas operacionais. O desenvolvedor trabalha no nível do **framework**, descrevendo a interface com widgets e lógica em Dart. O **engine** cuida da execução e da renderização gráfica, enquanto o **embedder** garante a integração com o ambiente da plataforma. Dessa forma, a arquitetura do Flutter consegue combinar produtividade no desenvolvimento com alto desempenho na execução das aplicações.
+### Importância dessas notações no aprendizado
 
-![Renderização Reativa](../assets/images/arquitetura_flutter_site.png)
-Fonte:https://docs.flutter.dev/resources/architectural-overview
+A utilização de fluxogramas e pseudocódigo possui um papel fundamental no ensino de programação porque permite que o estudante:
 
-#### Principais Aprendizados
-Flutter desenha cada pixel usando seu próprio motor gráfico
+* compreenda a lógica da solução
+* organize o raciocínio passo a passo
+* identifique erros conceituais antes de programar
+* desenvolva pensamento algorítmico
 
-O Flutter possíu três árvores principais: Widget, Element e RenderObject
+Somente depois dessa etapa a solução é transformada em um **programa em uma linguagem de programação**, como será estudado nas próximas unidades da disciplina.
 
-Dart é essencial para construção de UI
+---
 
-- StatelessWidget deve ser a escolha padrão
-- StatefulWidget é usado quando há estado mutável
+### Referências
 
-Referências
+DIJKSTRA, Edsger W. *A Discipline of Programming*. Englewood Cliffs: Prentice-Hall, 1976.
 
-GOOGLE. Flutter Architectural Overview. 2023. https://docs.flutter.dev/resources/architectural-overview
+G-PORTUGOL. **Manual do usuário do G-Portugol.** 2010. Disponível em https://gportugol.github.io/ 
 
-GOOGLE. Flutter API Documentation. 2023. https://api.flutter.dev
+MANZANO, José Augusto Navarro Garcia. **Revisão e discussão da norma ISO 5807 – 1985(E): proposta para padronização formal da representação gráfica da linha de raciocínio lógico utilizada no desenvolvimento da programação de computadores a ser definida no Brasil.** *THESIS*, São Paulo, v. 1, n. 1, p. 1–31, 1º semestre 2004.
 
-DART TEAM. Dart Language Tour. 2023. https://dart.dev/guides/language/language-tour
+PÓLYA, George. *How to Solve It: A New Aspect of Mathematical Method*. Princeton: Princeton University Press, 1945.
 
-FOWLER, Martin. Refactoring: Improving the Design of Existing Code. 2. ed. Addison-Wesley, 2018.
-
-MARTIN, Robert C. Clean Architecture. Prentice Hall, 2017.
-
-GAMMA, Erich et al. Design Patterns. Addison-Wesley, 1994.
+PEREIRA, Nilo Ney Coutinho Menezes. *Introdução à Programação com Python*. São Paulo: Novatec, 2014.
