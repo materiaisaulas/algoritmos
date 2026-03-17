@@ -1,4 +1,4 @@
-### Entrada e saída
+### Entrada de dados
 
 Na programação, entrada e saída de dados são elementos fundamentais para a interação entre o usuário e o programa. Em Python, esses processos são realizados principalmente com as funções input() e print(). A entrada de dados permite que o usuário forneça informações ao programa em tempo de execução, enquanto a saída de dados exibe mensagens, resultados de cálculos ou qualquer outro tipo de informação.
 

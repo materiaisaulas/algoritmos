@@ -259,8 +259,18 @@ Nesse caso:
 * `notas[0]` acessa a primeira lista `[7, 8, 9]`
 * `[1]` acessa o segundo elemento dessa lista
 
+:::note Listas dentro de listas 
+Outra forma de pensar sobre listas dentro de listas é na forma de matriz 
 
-Também podemos percorrer essas estruturas utilizando **laços de repetição**.
+| 7| 8| 9|
+|--|--|--|
+| 6| 5| 7|
+| 9| 8|10|
+
+:::
+
+
+Também podemos percorrer essas estruturas utilizando laços de repetição.
 
 ```python
 notas = [

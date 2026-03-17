@@ -1,4 +1,4 @@
-Primeiro programa
+### Primeiro programa
 
 Com o Visual Studio Code já instalado e configurado com a extensão Jupyter, podemos utilizar o próprio VS Code para executar blocos de código interativos, similares ao que encontraríamos em notebooks online como o Google Colab. Para isso, basta abrir um novo arquivo com a extensão .py ou um notebook .ipynb e começar a escrever o código.
 

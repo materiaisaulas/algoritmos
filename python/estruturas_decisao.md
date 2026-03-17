@@ -13,16 +13,7 @@ Essas estruturas tornam os programas dinâmicos e adaptáveis, permitindo resolv
 
 Em muitas situações, precisamos que nosso programa se comporte de maneiras diferentes dependendo de certas condições. Por exemplo: "Se a idade for maior que 18, permitir acesso; caso contrário, negar acesso". Para isso, usamos estruturas condicionais.
 
-# Teste
-
-> [!TIP]
-> Este bloco deve funcionar com o plugin flexible-alerts.
->
-> - item 1
-> - item 2
-
-
-:::tip
+:::note
 
 Python oferece as seguintes formas básicas de controle condicional:
 

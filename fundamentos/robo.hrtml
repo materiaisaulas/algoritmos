@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Jogo de Algoritmos</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    display:flex;
+    gap:30px;
+    padding:20px;
+}
+
+#grid{
+    display:grid;
+    grid-template-columns: repeat(5,60px);
+    grid-template-rows: repeat(5,60px);
+    gap:2px;
+}
+
+.celula{
+    width:60px;
+    height:60px;
+    border:1px solid #ccc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+textarea{
+    width:200px;
+    height:200px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div>
+
+<h3>Tabuleiro</h3>
+
+<div id="grid"></div>
+
+</div>
+
+<div>
+
+<h3>Código</h3>
+
+<textarea id="code">
+frente
+frente
+direita
+frente
+</textarea>
+
+<br><br>
+
+<button onclick="executar()">Executar</button>
+
+</div>
+
+<script>
+
+const tamanho = 5
+
+let x = 0
+let y = 4
+
+let direcao = "norte"
+
+const grid = document.getElementById("grid")
+
+function criarGrid(){
+
+    grid.innerHTML=""
+
+    for(let i=0;i<tamanho*tamanho;i++){
+
+        const d = document.createElement("div")
+        d.className="celula"
+
+        grid.appendChild(d)
+
+    }
+
+}
+
+function desenhar(){
+
+    const celulas = document.querySelectorAll(".celula")
+
+    celulas.forEach(c => c.innerHTML="")
+
+    const indice = y * tamanho + x
+
+    celulas[indice].innerHTML="🤖"
+
+}
+
+function frente(){
+
+    if(direcao=="norte") y--
+    if(direcao=="sul") y++
+    if(direcao=="leste") x++
+    if(direcao=="oeste") x--
+
+}
+
+function direita(){
+
+    if(direcao=="norte") direcao="leste"
+    else if(direcao=="leste") direcao="sul"
+    else if(direcao=="sul") direcao="oeste"
+    else if(direcao=="oeste") direcao="norte"
+
+}
+
+function esquerda(){
+
+    if(direcao=="norte") direcao="oeste"
+    else if(direcao=="oeste") direcao="sul"
+    else if(direcao=="sul") direcao="leste"
+    else if(direcao=="leste") direcao="norte"
+
+}
+
+function executar(){
+
+    const linhas = document
+        .getElementById("code")
+        .value
+        .split("\n")
+
+    let i=0
+
+    function passo(){
+
+        if(i>=linhas.length) return
+
+        const cmd = linhas[i].trim()
+
+        if(cmd=="frente") frente()
+        if(cmd=="direita") direita()
+        if(cmd=="esquerda") esquerda()
+
+        desenhar()
+
+        i++
+
+        setTimeout(passo,500)
+
+    }
+
+    passo()
+
+}
+
+criarGrid()
+desenhar()
+
+</script>
+
+</body>
+</html>
