@@ -28,7 +28,9 @@
         - [Listas](/algoritmos/python/colecoes_listas.md)
         - [Tuplas](/algoritmos/python/colecoes_tuplas.md)
         - [Set](/algoritmos/python/colecoes_set.md)
-        - [Dict](/algoritmos/python/colecoes_dict.md)
+        - [Dictd](/algoritmos/python/colecoes_dict.md) 
+
+
 
   - Projeto Prático
     - [Parte 1](/algoritmos/projeto/projeto1.md)
