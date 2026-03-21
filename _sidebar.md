@@ -1,4 +1,3 @@
-- [Home](/)
 - Fundamentos de lógica
    - [A Jornada](/algoritmos/README.md)
    - [Problemas e soluções](/algoritmos/fundamentos/fundamentos.md)
