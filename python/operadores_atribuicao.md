@@ -13,7 +13,7 @@ Esses operadores são úteis quando você precisa atualizar o valor de uma vari�
 | `x /= 2` | `x = x / 2` | Divide o valor de `x` por 2 |
 | `x %= 3` | `x = x % 3` | Calcula o resto da divisão de `x` por 3 |
 | `x **= 2` | `x = x ** 2` | Eleva `x` ao quadrado (potência) |
-| `x //= 4` | `x=x//(x//4)` | Realiza divisão inteira de `x` por 4 |
+| `x //= 4` | `x= x//4` | Realiza divisão inteira de `x` por 4 |
 
 
 :::example
